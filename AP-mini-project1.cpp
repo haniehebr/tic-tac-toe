@@ -609,6 +609,12 @@ void receiveFrom(Client client) {
 				if (k != NULL)
 					break;
 			}
+			if (seconds == 0) {
+				if (c == 1)
+					c = 2;
+				else
+					c = 1;
+			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
 			{
@@ -688,6 +694,12 @@ void receiveFrom(Client client) {
 				if (k != NULL)
 					break;
 			}
+			if (seconds == 0) {
+				if (c == 1)
+					c = 2;
+				else
+					c = 1;
+			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
 			{
@@ -765,6 +777,12 @@ void receiveFrom(Client client) {
 				sscanf_s(msg, "%d", &k);
 				if (k != NULL)
 					break;
+			}
+			if (seconds == 0) {
+				if (c == 1)
+					c = 2;
+				else
+					c = 1;
 			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
