@@ -596,7 +596,7 @@ void receiveFrom(Client client) {
 					cout << "recv failed" << endl;
 					if (client.getSocket() == clients[0].getSocket()) {
 						string a = "Player 2 won";
-						send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+						send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 					}
 					else
 					{
@@ -610,10 +610,15 @@ void receiveFrom(Client client) {
 					break;
 			}
 			if (seconds == 0) {
-				if (c == 1)
+				string d = "your time is up";
+				if (c == 1) {
+					send(clients[0].getSocket(), d.c_str(), d.size(), 0);
 					c = 2;
-				else
+				}
+				else {
 					c = 1;
+					send(clients[1].getSocket(), d.c_str(), d.size(), 0);
+				}
 			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
@@ -621,7 +626,7 @@ void receiveFrom(Client client) {
 				cout << "recv failed" << endl;
 				if (client.getSocket() == clients[0].getSocket()) {
 					string a = "Player 2 won";
-					send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+					send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 				}
 				else
 				{
@@ -681,7 +686,7 @@ void receiveFrom(Client client) {
 					cout << "recv failed" << endl;
 					if (client.getSocket() == clients[0].getSocket()) {
 						string a = "Player 2 won";
-						send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+						send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 					}
 					else
 					{
@@ -695,10 +700,15 @@ void receiveFrom(Client client) {
 					break;
 			}
 			if (seconds == 0) {
-				if (c == 1)
+				string d = "your time is up";
+				if (c == 1) {
+					send(clients[0].getSocket(), d.c_str(), d.size(), 0);
 					c = 2;
-				else
+				}
+				else {
 					c = 1;
+					send(clients[1].getSocket(), d.c_str(), d.size(), 0);
+				}
 			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
@@ -706,7 +716,7 @@ void receiveFrom(Client client) {
 				cout << "recv failed" << endl;
 				if (client.getSocket() == clients[0].getSocket()) {
 					string a = "Player 2 won";
-					send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+					send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 				}
 				else
 				{
@@ -765,7 +775,7 @@ void receiveFrom(Client client) {
 					cout << "recv failed" << endl;
 					if (client.getSocket() == clients[0].getSocket()) {
 						string a = "Player 2 won";
-						send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+						send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 					}
 					else
 					{
@@ -779,10 +789,15 @@ void receiveFrom(Client client) {
 					break;
 			}
 			if (seconds == 0) {
-				if (c == 1)
+				string d = "your time is up";
+				if (c == 1) {
+					send(clients[0].getSocket(), d.c_str(), d.size(), 0);
 					c = 2;
-				else
+				}
+				else {
 					c = 1;
+					send(clients[1].getSocket(), d.c_str(), d.size(), 0);
+				}
 			}
 			seconds = 20;
 			/*if ((recv_size = recv(client.getSocket(), msg, 2000, 0)) == SOCKET_ERROR)
@@ -790,7 +805,7 @@ void receiveFrom(Client client) {
 				cout << "recv failed" << endl;
 				if (client.getSocket() == clients[0].getSocket()) {
 					string a = "Player 2 won";
-					send(clients[0].getSocket(), a.c_str(), a.size(), 0);
+					send(clients[1].getSocket(), a.c_str(), a.size(), 0);
 				}
 				else
 				{
